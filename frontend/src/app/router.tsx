@@ -11,6 +11,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { SignupPage } from "../pages/SignupPage";
 import { LessonPage } from "../pages/LessonPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
+import { ServerErrorPage } from "../pages/ServerErrorPage";
 import { SandboxPage } from "../pages/SandboxPage";
 import { ProfileSettingsPage } from "../pages/ProfileSettingsPage";
 import { VerifyCertificatePage } from "../pages/VerifyCertificatePage";
@@ -143,7 +144,7 @@ export function AppRouter() {
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/verify" element={<VerifyCertificatePage />} />
       <Route path="/verify/:hash" element={<VerifyCertificatePage />} />
-
+      <Route path="/500" element={<ServerErrorPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
